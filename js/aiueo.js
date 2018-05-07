@@ -4,6 +4,7 @@ let memoChild = document.createElement("li");
 memoChild.className ="memo_child";
 let list_body = document.getElementById("memo_list");
 $("#fix_edit_button").hide();
+$("#select_button").hide();
 
 if (localStorage.getItem("memoList") != null) {
   var memoListS = localStorage.getItem("memoList");
@@ -75,6 +76,20 @@ function add_list() {
   t.readOnly = false;
   t.value = "";
   $("#fix_edit_button").show();
+}
+
+//編集ボタン#select_buttonの子要素を全部削除、memoNumberぶんのmemoをforで追加
+
+function edit() {
+  $("#select_button").show();
+  for (let i = memoNumber; i >0; i--) {
+    let op = document.getElementById("select_button");
+    let optionChild = document.createElement("option");
+    let text = document.createTextNode("memo" + i);
+    optionChild.appendChild(text);
+    optionChild.value = i;
+    op.appendChild(optionChild);
+  }
 }
 
 // //ローカルストレージへ連想配列をセットするメソッド使うかは不明
