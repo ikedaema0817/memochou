@@ -12,11 +12,20 @@ html(lang='ja')
               
           .detail_area: textarea(name="content" readonly).editing#editing
           .fix_edit_button#fix_edit_button(onClick="fix_edit();"): img.fix_edit_button_img(src="./img/th_app_button_check.jpg")
+          .fix_edit_button#fix_edit_button2(onClick="fix_edit2();"): img.fix_edit_button_img(src="./img/th_app_button_check.jpg")
+
           .addButton#add_button(onClick="add_list();"): p.aiu +
           .editButton#editButton(onClick="edit();"): img.edit_button(src="./img/henshuu.jpg")
+          .remove_button#remove_button(onClick="remove();"): img.remove_img(src="./img/remove.jpg")
 
-        select#select_button.select_button
-          
+        form(name="aiueo")
+          select#select_button.select_button(name="aiueoa") 
+          #button.button(onClick="bt();") 編集！
+
+          select#delete_button.delete_button(name="delete") 
+          #d_button.d_button 削除！
+
+
         
 
         script(src="./js/jquery-2.1.3.min.js")

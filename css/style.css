@@ -70,4 +70,35 @@ body {
   right: 10px;
   top: 100px;
   height: 30px;
+  width: 90px; }
+
+.button {
+  position: absolute;
+  right: 30px;
+  top: 140px;
+  height: 10px;
+  width: 50px; }
+
+.remove_button {
+  position: absolute;
+  right: 10px;
+  top: 400px;
+  height: 30px;
   width: 30px; }
+  .remove_button img {
+    height: 30px;
+    width: 30px; }
+
+.delete_button {
+  position: absolute;
+  right: 10px;
+  top: 500px;
+  height: 30px;
+  width: 90px; }
+
+.d_button {
+  position: absolute;
+  right: 30px;
+  top: 540px;
+  height: 10px;
+  width: 50px; }
